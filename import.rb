@@ -18,8 +18,8 @@ db_connection do |conn|
     )
 
     invoice_num = row[6]
-
     unless invoices.any? { |inv| inv["invoice_num"] == invoice_num}
+
       employees = conn.exec(
         'SELECT emp_name FROM employee'
       )
