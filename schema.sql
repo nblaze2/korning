@@ -35,7 +35,7 @@ CREATE TABLE invoice (
   invoice_num INT,
   units INT,
   sales_date DATE,
-  sales_amt DECIMAL,
+  sales_amt MONEY,
   freq_id INT REFERENCES frequency(id),
   emp_id INT REFERENCES employee(id),
   cust_id INT REFERENCES customer(id),
